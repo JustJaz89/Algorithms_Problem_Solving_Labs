@@ -133,8 +133,11 @@ print(is_happy_num(19))
 # Task 2: Prime Numbers
 # Check if a number is prime or not
 # Take input from the user
+# A prime number is a number that is only divisible by one and itself.
+# Write a method that prints out all prime numbers between 1 and 100 
 
-num = 19 #19 is a prime number, 22 isn't a prime number
+
+num = 19 #(19 is a prime number, 22 isn't a prime number)
 if num == 1:
     print(num, "is not a prime number")
 elif num > 1:
@@ -149,10 +152,48 @@ elif num > 1:
 
 # if input number is less than or equal to 1, it is not prime
 
+# prime numbers between 1 and 100
+
+# for num in range(1, 101):
+#     status = True
+#     if num < 2:
+#         status = False
+#     else:
+
+def is_prime(num):
+    status = True
+    if num < 2:
+        status = False
+    else:
+        for i in range(2, num):
+            if num % i == 0:
+                status = False
+    return status
+
+for num in range(1, 101):
+    if is_prime(num):
+        if num == 97:
+            print(num)
+        else:
+            print(num, "", "")
+
+# OR
+# number_one = input("Input a number: ")
+# number_two = input("Input another number: ")
+number_one = 1
+number_two = 101
+
+for x in range(1, 101):
+    prime = True
+    for i in range(2, x):
+        if (x % i == 0):
+            prime = False
+    if prime == True:
+        print(x)
+
+print("Completed")
     
 
-
-
 # Task 3: Fibonacci
-
+# a series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers
 
