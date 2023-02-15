@@ -101,7 +101,7 @@ print("Completed")
 # Task 3: Fibonacci
 # a series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers
 
-# Program to display the Fibonacci sequence up to n-th term
+# Program to display the Fibonacci sequence
 
 nterms = int(input("How many terms? "))
 
