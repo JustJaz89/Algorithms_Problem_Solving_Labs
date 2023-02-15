@@ -113,9 +113,44 @@ print(string_one)
 
 # Algorithms & Problem Solving III
 # Task 1: Happy Numbers
+# Start with a positive integer, replace the number by the sum of the squares of its digits, and
+# repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a
+# cycle which does not include 1.
+
+def is_happy_num(num):
+    past = set()
+    while num != 1:
+        num = sum(int(i)**2 for i in str(num))
+        if num in past:
+            return False
+        past.add(num)
+    return(True)
+print(is_happy_num(7))
+print(is_happy_num(999))
+print(is_happy_num(19))
 
 
 # Task 2: Prime Numbers
+# Check if a number is prime or not
+# Take input from the user
+
+num = 19 #19 is a prime number, 22 isn't a prime number
+if num == 1:
+    print(num, "is not a prime number")
+elif num > 1:
+    # check for factors
+    for i in range(2, num):
+        if (num % i) == 0:
+            print(num, "is not a prime number")
+            print(i, "*", num/i, "=", num)
+            break
+    else:
+        print(num, "is a prime number")
+
+# if input number is less than or equal to 1, it is not prime
+
+    
+
 
 
 # Task 3: Fibonacci
