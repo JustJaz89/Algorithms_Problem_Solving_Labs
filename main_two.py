@@ -16,6 +16,22 @@ print(is_happy_num(7))
 print(is_happy_num(999))
 print(is_happy_num(19))
 
+# OR
+num = 13
+def is_happy_num(num):
+    if num == 1 or num == 7:
+        return True
+
+    Sum, x = num, num
+
+    while Sum > 9:
+        Sum = 0
+
+if (is_happy_num(num)):
+    print(num, "is a Happy number")
+else:
+    print(num, "is not a Happy number")
+
 
 # Task 2: Prime Numbers
 # Check if a number is prime or not
@@ -84,3 +100,29 @@ print("Completed")
 
 # Task 3: Fibonacci
 # a series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers
+
+# Program to display the Fibonacci sequence up to n-th term
+
+nterms = int(input("How many terms? "))
+
+# first two terms
+n1, n2 = 0, 1
+count = 0
+
+# check if the number of terms is valid
+if nterms <= 0:
+   print("Please enter a positive integer")
+# if there is only one term, return n1
+elif nterms == 1:
+   print("Fibonacci sequence upto",nterms,":")
+   print(n1)
+# generate fibonacci sequence
+else:
+   print("Fibonacci sequence:")
+   while count < nterms:
+       print(n1)
+       nth = n1 + n2
+       # update values
+       n1 = n2
+       n2 = nth
+       count += 1
